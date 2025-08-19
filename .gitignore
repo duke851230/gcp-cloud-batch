@@ -1,0 +1,103 @@
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+terraform.tfvars
+*.tfvars
+*.tfvars.json
+.terraformrc
+terraform.rc
+
+# Terraform 備份檔案
+*.backup
+*.backup.*
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Python 虛擬環境
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Python IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 日誌檔案
+*.log
+logs/
+
+# 環境變數檔案
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# 作業系統檔案
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# 編輯器檔案
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 暫存檔案
+*.tmp
+*.temp
+temp/
+tmp/
+
+# 憑證和密鑰
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+secrets/
+credentials/
+
+# Docker
+.dockerignore
+Dockerfile.prod
+docker-compose.override.yml
+
+# 其他
+*.bak
+*.orig
+*.rej
