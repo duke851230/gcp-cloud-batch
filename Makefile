@@ -35,15 +35,3 @@ tf-output:
 
 tf-validate:
 	cd terraform && terraform validate
-
-tf-fmt:
-	cd terraform && terraform fmt -recursive
-
-tf-refresh:
-	cd terraform && terraform refresh
-
-tf-show:
-	cd terraform && terraform show
-
-tf-state:
-	cd terraform && terraform state list

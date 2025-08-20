@@ -1,0 +1,10 @@
+project_id         = "YOUR_PROJECT_ID"
+region             = "asia-east1"
+scheduler_location = "asia-east1"
+timezone           = "Asia/Taipei"
+scheduler_cron     = "*/5 * * * *"
+artifact_repo_id   = "batch-jobs"
+image_name         = "python-job:latest"
+machine_type       = "e2-small"
+task_cpu_milli     = 1000
+task_memory_mib    = 512
