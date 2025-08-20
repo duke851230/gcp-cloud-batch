@@ -145,23 +145,17 @@ resource "google_cloud_scheduler_job" "run_batch" {
   }
 }
 
-# IAM：Batch Runner 需要完整的 Compute 權限
-resource "google_project_iam_member" "batch_runner_compute_admin_full" {
+
+# IAM：Batch Runner 需要 Batch 服務代理權限
+resource "google_project_iam_member" "batch_runner_service_agent" {
   project = var.project_id
-  role    = "roles/compute.admin"
+  role    = "roles/batch.serviceAgent"
   member  = "serviceAccount:${google_service_account.batch_runner.email}"
 }
 
-# IAM：Batch Runner 需要網路管理權限
-resource "google_project_iam_member" "batch_runner_network_admin" {
+# IAM：Batch Runner 需要 Batch 代理報告權限
+resource "google_project_iam_member" "batch_runner_agent_reporter" {
   project = var.project_id
-  role    = "roles/compute.networkAdmin"
-  member  = "serviceAccount:${google_service_account.batch_runner.email}"
-}
-
-# IAM：Batch Runner 需要服務帳號使用者權限
-resource "google_project_iam_member" "batch_runner_service_account_user" {
-  project = var.project_id
-  role    = "roles/iam.serviceAccountUser"
+  role    = "roles/batch.agentReporter"
   member  = "serviceAccount:${google_service_account.batch_runner.email}"
 }
